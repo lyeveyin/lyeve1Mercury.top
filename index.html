@@ -93,7 +93,7 @@
                         src='https://lyeveyin.github.io/lyeveblog2.top/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://lyeveyin.github.io/lyeveblog2.top/images/avatar.png?v=1629357498850" class="avatar">
+            <img src="https://lyeveyin.github.io/lyeveblog2.top/images/avatar.png?v=1629357936223" class="avatar">
         </div>
         <div class="sitename">Lyeve&#39;s diary</div>
         <span class="description" data-text='["八大行星——水星记"]'>&nbsp;</span>
@@ -103,7 +103,7 @@
         </div>
         <div class="siteinfocontainer">
             <span class="siteinfo" id="siteinfo-postsnum"></span>
-            <span class="siteinfo">1</span>
+            <span class="siteinfo">2</span>
         </div>
         
         <div class="search">
@@ -602,7 +602,7 @@
                 donateInit();
             lazyload();
             codeinit();
-            if ("valine" == "twikoo") {
+            if ("default" == "twikoo") {
                 //twikoo头像更换
                 setTimeout(replaceAvatar, 3000);
                 setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
@@ -959,7 +959,7 @@ menulist.eq(i).show();
                         <!-- 移动端欢迎页 -->
 <div class="welcome">
     <div class="avatar-border">
-        <img src="https://lyeveyin.github.io/lyeveblog2.top/images/avatar.png?v=1629357498850" class="avatar">
+        <img src="https://lyeveyin.github.io/lyeveblog2.top/images/avatar.png?v=1629357936223" class="avatar">
     </div>
     <span class="mobiledescribtion"></span>
 </div>
@@ -1045,35 +1045,6 @@ menulist.eq(i).show();
 </script>
                     </div>
                     <div style="display:none">
-        <div id="vcomments">
-        </div>
-        <script>
-            var valine = new Valine();
-            var curpath = window.location.pathname;
-            if (curpath[curpath.length - 1] != '/')
-                curpath += '/'
-            valine.init({
-                el: '#vcomments',
-                appId: '',
-                appKey: '',
-                notify: true,
-                verify: false,
-                avatar: 'retro',
-                pageSize: 10,
-                placeholder: '既然来了，何不畅所欲言呢？',
-                recordIP: true,
-                path: curpath //[重点] 记得添加path路径
-            });
-        </script>
-        <script type="text/javascript">
-            var jrsc = '既然来了，何不畅所欲言呢？';
-            jinrishici.load(function (result) {
-                // 自己的处理逻辑
-                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
-                    .dynasty + " · " + result.data.origin.author;
-            });
-        </script>
-
 </div>
                     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/font-awesome.css">
 
@@ -1114,6 +1085,9 @@ menulist.eq(i).show();
             <span name="pllink">https://lyeveyin.github.io/lyeveblog2.top/post/qi-si-jun-wo-hao-xiang-zai-na-jian-guo-ni/</span>
             <span name="pldate">2021-08-19</span>
             <span name="plstats">0 min read</span>
+            
+                <span name="pltag" alt="【齐思钧】我好像在哪见过你">追星</span>
+                <span name="pltaglink" alt="【齐思钧】我好像在哪见过你">https://lyeveyin.github.io/lyeveblog2.top/tag/zhui-xing/</span>
             
         
     </div>
