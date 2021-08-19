@@ -3229,7 +3229,7 @@ a {
 }
 
       .posttitlewithoutimg {
-        color: #868e96;
+        color: #212529;
       }
     
       .sitename {
@@ -3237,16 +3237,16 @@ a {
       }
     
         .describtion {
-          color: #212529;
+          color: #495057;
         }
       
         .menubutton {
-          color: #212529;
+          color: #868e96;
         }
 
         .menucontainer span::before,
         .menucontainer span::after {
-          color:#212529;
+          color:#868e96;
           content: attr(data-text);
           position: absolute;
           top: -0.5em;
@@ -3256,6 +3256,10 @@ a {
         }
 
         .menubutton:visited{
+          color: #868e96;
+        }
+      
+        .posttitle {
           color: #212529;
         }
       
