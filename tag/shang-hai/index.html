@@ -1,190 +1,23 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="ps：目前有个人喜好取向，不客观，非编年史
-逐渐扩大兴趣地图：动漫→网课→综艺、科普→娱乐、搞笑→游戏、动物
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+<link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/styles/main.css">
+<link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/font-awesome.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<title>Lyeve's diary</title>
 
-
-KB呆又呆：⭐⭐⭐⭐⭐fps神 第一次知道KB是他和歪怂帮主南北联机的picopark  塑料普通话 后来才发现之前迷恋sup..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/styles/main.css">
-    <!-- 代码渲染风格css -->
-    
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/rainbow.min.css">
-    
-    <!-- 代码高亮插件 -->
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
-    <!-- 代码复制插件 -->
-    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
-    <!-- live2d插件 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
-    <!-- 数学公式 -->
-    
-    <title>【个人向】列一列b站up主</title>
-
-    <!-- 大纲索引css调整 -->
-    
-    <style>
-        .markdownIt-TOC {
-            margin-left: 28%;
-            padding-left: 2px;
-            width: 80%;
-        }
-
-        .markdownIt-TOC li {
-            padding-left: 8%;
-        }
-    </style>
-    
-</head>
 
 <body>
-    <div id="landlord">
-        <div class="message" style="opacity:0"></div>
-        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-    </div>
-    <div id="domainname" style="display:none">https://lyeveyin.github.io/lyeveblog2.top</div>
+
     <div id="content">
-        <div>
-            <!----------- 移动端导航栏👇 ----------------->
-            <div id="bar">
-                <head>
-  <!-- 引入Bootstrap核心样式文件 -->
-  <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/bootstrap.min.css">
-</head>
-<style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
-
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" href="https://lyeveyin.github.io/lyeveblog2.top">Lyeve&#39;s diary&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
-        
-        
-        <li><a href="https://lyeveyin.github.io/lyeveblog2.top" target="_blank">
-            大厅
-          </a></li>
-        
-        
-        
-        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/archives" target="_blank">
-            时间轴
-          </a></li>
-        
-        
-        
-        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/tags" target="_blank">
-            关键词
-          </a></li>
-        
-        
-        
-        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/post/about" target="_blank">
-            About
-          </a></li>
-        
-        
-        
-        <li><a data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/talk">说说</a></li>
-        
-        
-          
-        <li><a data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/friends">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
-            </div>
-            <!----------- 移动端导航栏👆 ----------------->
-
-            <!--------------- pc端菜单栏👇 ---------------->
-            <div class="side"><head>
+        <div class="nav-large">
+            <div class="row">
+                <!--------------- pc端菜单栏👇 ---------------->
+                <div class="side"><head>
     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/styles/main.css">
     
@@ -1056,288 +889,343 @@ menulist.eq(i).show();
 
 
 </div>
-            <!--------------- pc端菜单栏👆 ---------------->
+                <!--------------- pc端菜单栏👆 ---------------->
 
-            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-            
-            <div>
-                <div id="tab1" class="tab">
-                    <div class="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <!----------- 移动端导航栏👇 ----------------->
+                <div class="tbar"> <head>
+  <!-- 引入Bootstrap核心样式文件 -->
+  <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/bootstrap.min.css">
+</head>
+<style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" href="https://lyeveyin.github.io/lyeveblog2.top">Lyeve&#39;s diary&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="https://lyeveyin.github.io/lyeveblog2.top" target="_blank">
+            大厅
+          </a></li>
+        
+        
+        
+        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/archives" target="_blank">
+            时间轴
+          </a></li>
+        
+        
+        
+        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/tags" target="_blank">
+            关键词
+          </a></li>
+        
+        
+        
+        <li><a href="https://lyeveyin.github.io/lyeveblog2.top/post/about" target="_blank">
+            About
+          </a></li>
+        
+        
+        
+        <li><a data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/talk">说说</a></li>
+        
+        
+          
+        <li><a data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/friends">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> </div>
+                <!----------- 移动端导航栏👆 ----------------->
+
+                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+                
+                <div>
+                    <div id="tab1" class="tab">
+                        <div class="bars">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="close"></div>
                     </div>
-                    <div class="close"></div>
-                </div>
-                <div class="col-md-1 col-lg-3"></div>
-                <!-- main标签，pjax渲染时加载以下内容👇 -->
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
-                    <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/font-awesome.css">
+                    <div class="col-lg-3"></div>
+                        <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                            <link rel="stylesheet" href="https://lyeveyin.github.io/lyeveblog2.top/media/css/font-awesome.css">
 
-<body>
-    <div class="allcontent" id="postdetail">
-        <div class="postshow postpadding" style="padding-bottom: 0;">
-            
-            <div class="postdetailimg">
-                
-                <img src="https://lyeveyin.github.io/lyeveblog.top/post-images/1628784165294.jpg" class="postimage">
-                
-            </div>
-            <div class="postinfo-detail">
-                <div class="postdate"><i class="fa fa-calendar"></i>2021-08-26</div>
-            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 7 min read</div>
-            <div class="posttag">
-                
-            </div>
-        </div>
+    <div style="display: none;">
         
-        <div id="articlecontent">
-            <div id="texttitle" style="text-align: center">
-                <h2 id="ptitle">【个人向】列一列b站up主</h2>
-                <!-- id 将作为查询条件 -->
-                <div id="pl" style="display:none">https://lyeveyin.github.io/lyeveblog2.top/post/ge-ren-xiang-lie-yi-lie-b-zhan-up-zhu/</div>
-                <div id="rootaddr" style="display:none">https://lyeveyin.github.io/lyeveblog2.top</div>
+            
                 
-                    
+                    <span name="plfeature">https://lyeveyin.github.io/lyeveblog.top/post-images/1628784165294.jpg</span>
                 
-            </div>
-            <div class="text ">
-                <p>ps：目前有个人喜好取向，不客观，非编年史<br>
-逐渐扩大兴趣地图：动漫→网课→综艺、科普→娱乐、搞笑→游戏、动物</p>
-<ol>
-<li>
-<p>KB呆又呆：⭐⭐⭐⭐⭐fps神 第一次知道KB是他和歪怂帮主南北联机的picopark  塑料普通话 后来才发现之前迷恋superbunnyman视频的也看过他和花少北玩，后面入坑是因为喜欢看他俩玩游戏 看《双人成行》连续剧简直享受！当然也喜欢他的所有cp 跟局长的太虐了 还有k花虐向视频甚至看哭了！入坑后补以前的游戏直播视频，认识了局长、闻香识、小绝、老E、A哥。入坑了游戏区之外，还入坑现在正是他转型去的宠物区，帮帮粿粿我的爱。（于是找房特地挑选有没有合租养猫的）</p>
-</li>
-<li>
-<p>花少北：⭐⭐⭐⭐⭐k花党不解释 微操之神 由花去关注了之前没关注的阴阳怪气、六道。谁能想象到我真的入坑因为他玩游戏的声音哈哈哈，花大喇叭。后来知道脸着实惊讶了哈哈哈，太有反差了吧。花少北----游戏区颜值顶流（个人滤镜）</p>
-</li>
-<li>
-<p>逍遥散人：⭐⭐⭐⭐⭐第一次知道散人老师是在最强大脑，散人老师以对游戏的极强的代入感和强实力操作让我入坑于他的直播！是的面对KB北子哥和散人同时直播我选了散人老师！无论任何类型散人老师真的都能说会道，逻辑清楚。打个雀魂麻将都能成功安利到我。提前感知我2021年度报告我看直播花费的时间了</p>
-</li>
-<li>
-<p>郭文韬、蒲熠星：⭐⭐⭐⭐名学不解释</p>
-</li>
-<li>
-<p>JY、刘小怂、少帮主、火树：⭐⭐⭐⭐不算b站土著哈哈哈，不解释</p>
-</li>
-<li>
-<p>-LKs-：⭐⭐⭐⭐关注好久了，永远的墨镜，永远能有新鲜题材，而且可以保证质量。就没有lks不认识的人hhh</p>
-</li>
-<li>
-<p>影视飓风：⭐⭐⭐⭐关注影视飓风正巧是他20w粉丝视频的时候，观感上就能知道不只是局限于up主，而是立志于把自媒体路线规划好，更是一个创业公司，看他的视频是学到了许许多多的打光技巧、摄影技巧设备等等等，Tim总是很真诚很专业，看他的视频你就确信他会无限进步。</p>
-</li>
-<li>
-<p>粤男有话儿：⭐⭐⭐⭐可以说是老粉了，从粤男18开始reaction就追了。说实话，reaction视频在b站娱乐区占比大，然而有大部分原因只是潮流，性质导致观众又经常受限于粉圈，哈哈哈往往是想看别人怎么夸你偶像。因此往往up主的粉丝多就不一定反映up的内容了，而粤男最吸引我的能在reaction中突出的还是小导演有趣的策划，劳哥看得仔细阅读理解满分又总能输出观点，阿嘉严格但专业，阿智sylvia......</p>
-</li>
-<li>
-<p>老师好我叫何同学：⭐⭐⭐知识区，以质量取胜，长期不更新。说个数据吧2017年10月至今2021年8月粉丝数765w；一共仅仅有42个视频，播放量2.2亿，获赞数2819万；平均一个视频500w播放量，67w点赞量。</p>
-</li>
-<li>
-<p>毕导THU：⭐⭐⭐同知识区，和何同学一样更新缓慢，知识输出接地气却有营养。个人希望知识区在b站可以更主流更受关注。</p>
-</li>
-<li>
-<p>罗翔说刑法：⭐⭐⭐现b站一哥（狗头）b站目前粉丝量第一——1766.1w，罗翔老师</p>
-</li>
-<li>
-<p>啊吗粽：⭐⭐⭐个人认为最有内涵的整活区up主，每个选题总能做得既有趣又特别。 重点推荐以下几个<a href="https://www.bilibili.com/video/BV1SV41177Zk?share_source=copy_web">扮成老人去见外婆，她居然不认我，还说我是骗子...</a></p>
-</li>
-<li>
-<p>拉宏桑：⭐⭐⭐算生活区吧应该，自然做作（狗头）就是很有趣，个人喜欢她的风格包括颜值哈哈哈。最印象深刻的就是她的发型史和<a href="https://www.bilibili.com/video/BV1ht411L72V?share_source=copy_web">badguy改编</a>让我觉得她可以去音乐区多闯闯玩</p>
-</li>
-<li>
-<p>将将阿随碎碎念：⭐⭐⭐她俩开始做视频才一年，3500粉丝，毕竟本人是建筑学生hh，很喜欢他们的科普视频，风格是有经过设计的小精致感，甚至reaction个梦想改造家你都能get点。</p>
-</li>
-<li>
-<p>中国boy：⭐⭐⭐交际广泛，次元壁破坏者，你在哪里都能感叹“妈耶他俩认识？梦幻联动”</p>
-</li>
-<li>
-<p>在下哲别：⭐⭐⭐很会整活，关键他在整活的过程中自然不尴尬，看<a href="https://www.bilibili.com/video/BV1zg411777p?share_source=copy_web">下一个是谁</a>才认识哲别和力元君，后面逐渐关注变形兄弟们</p>
-</li>
-<li>
-<p>英语兔：⭐⭐⭐学英语必备，已看完他全部视频hh</p>
-</li>
-<li>
-<p>oooooohmygosh：⭐⭐⭐设计类科普，风格自成一派，讲得很易懂有趣没有观看门槛。</p>
-</li>
-<li>
-<p>GaooV1：⭐⭐⭐个人很喜欢的无性别穿搭，小高无论是视频风格还是穿衣风格都很特别，要成为最会搭配的朋克爱好者。</p>
-</li>
-<li>
-<p>加加夕e：⭐⭐支教老师，看她的视频会感叹教育只要有这些老师在，就有希望。普通又不平凡。<a href="https://www.bilibili.com/video/BV14i4y1N7D8?share_source=copy_web">“无穷的远方 无数的人们 都与我有关”</a></p>
-</li>
-<li>
-<p>老番茄：⭐⭐游戏区的学霸，上过青年大学习的曾经的b站一哥复日大学毕业两次的代言人（狗头）粉丝数1596w，获赞1亿，播放量19.1亿，371个视频；</p>
-</li>
-<li>
-<p>吃素的狮子、痒局长、伊丽莎白鼠、A路人：b站发家——鬼畜区，四大欠王你可能不一定关注，但一定都看过他们的视频。</p>
-</li>
-<li>
-<p>大阿拽：⭐啊吗粽的小舅子，颜狗的快乐</p>
-</li>
-<li>
-<p>平凡的巴达：⭐哲别亲哥，颜狗+1</p>
-</li>
-<li>
-<p>郭本尼：⭐b站目前很常见的吐槽类视频，也是这类型最容易出圈，喜欢关注糊综在同质化视频中脱颖而出。</p>
-</li>
-<li>
-<p>徐珺大哥：⭐个人不太感冒舞蹈区流量up主（舞蹈室团队除外），有百大也get不到。不过在LKS-的视频里徐珺大哥的发言很圈粉</p>
-</li>
-<li>
-<p>有山先生：⭐</p>
-</li>
-<li>
-<p>玲格：⭐音乐相关科普，讲一些音乐人的成长史（目测日本音乐人多点）讲得很清晰。</p>
-</li>
-<li>
-<p>太闲课代表：⭐粉丝数量7000，主要科普日本事务所和偶像团体，杰尼斯科普视频做的很好。</p>
-</li>
-<li>
-<p>山山山山梨：⭐同主要科普偶像团体，看了<a href="https://www.bilibili.com/video/BV1XK4y197kc?share_source=copy_web">被称为&quot;山口百惠再来&quot;的她，14岁C位出道，18岁为何决然退团？</a>成功入坑平手友梨奈</p>
-</li>
-<li>
-<p>三口草莓：⭐艺术类科普<a href="https://www.bilibili.com/video/BV14g411T7Wu?share_source=copy_web">备好纸巾｜惊艳！崛起的中国艺术｜靠艺术脱贫的山村｜</a>理想的我永远会各种各样的艺术所感动</p>
-</li>
-<li>
-<p>小G老师不拖堂：⭐粉丝1.7w，建筑生可以关注的第二个up主！</p>
-</li>
-<li>
-<p>是桃大、法山叔：⭐娱乐区众多讨论社会热点，娱乐八卦营销号中，总会出现会认真剖析背后的up主。</p>
-</li>
-<li>
-<p>北京青年x凉子访谈录：⭐通过访谈看无数人各种各样的人生百态。</p>
-</li>
-<li>
-<p>Hey-Snail：⭐哈哈哈教唱英文歌</p>
-</li>
-<li>
-<p>塑料叉：同济建筑系</p>
-</li>
-</ol>
-<p>单个视频：</p>
-<ol>
-<li><a href="https://www.bilibili.com/video/BV1T5411w7JC?share_source=copy_web">爷爷消失 7 年，却没有人去找他… 【阿尔茨海默病纪实】</a></li>
-<li><a href="https://www.bilibili.com/video/BV1y54y1S7QL?share_source=copy_web">路人：这棵树到底有啥好拍的？</a>：用摄影的形式让树重生，浪漫极了！</li>
-<li><a href="https://www.bilibili.com/video/BV1CK4y197NS?share_source=copy_web">【童姥】一个76岁的奶奶临终前决定去离婚</a><br>
-<img src="https://lyeveyin.github.io/lyeveblog2.top/post-images/1630136495732.png" alt="" loading="lazy"></li>
-</ol>
+                
+            <span name="pltitle">【IN上海】01尝试</span>
+            <span name="pllink">https://lyeveyin.github.io/lyeveblog2.top/post/shang-hai-zhi-lu-di-yi-zhang-chang-shi/</span>
+            <span name="pldate">2021-09-25</span>
+            <span name="plstats">5 min read</span>
+            
+                <span name="pltag" alt="【IN上海】01尝试">上海</span>
+                <span name="pltaglink" alt="【IN上海】01尝试">https://lyeveyin.github.io/lyeveblog2.top/tag/shang-hai/</span>
+            
+        
+    </div>
 
-            </div>
-            <hr style="width: 80%;">
-            
-            <div class="donateContainer">
-                <span class="donatebtn">赏</span>
-            </div>
-            <div class="donateContainer">
-                <img src="" alt="" class="donate">
-            </div>
-            
-            <div class="postfooter">
-                <ul class="post-copyright">
-                    <li><strong>文章作者：</strong>lyeve</li>
-            <li><strong>原文链接：</strong>https://lyeveyin.github.io/lyeveblog2.top/post/ge-ren-xiang-lie-yi-lie-b-zhan-up-zhu/</li>
-            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
-                许可协议。转载请注明出处！</li>
-            </ul>
-        </div>
-        
-            <div class="shareContainer">
-                <div class="share" style="height:30px;background: white;">
-                    <a class="qq" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/qqs.png" alt=""></i></a>
-                    <a class="wechat" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/wechats.png" alt=""></i></a>
-                    <a class="weibo" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/weibos.png" alt=""></i></a>
-                    <a class="qzone" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/qzones.png" alt=""></i></a>
-                    <a class="douban" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/doubans.png" alt=""></i></a>
-                    <a class="facebook" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/facebooks.png" alt=""></i></a>
-                    <a class="twitter" href=""><i><img class="shareicon"
-                                src="https://lyeveyin.github.io/lyeveblog2.top/media/images/twitter.png" alt=""></i></a>
-                </div>
-            </div>
-            
-        <div id="otherpost">
-            
-            <a  data-pjax class="prev-post-pc" href="https://lyeveyin.github.io/lyeveblog2.top/post/to-do-list/"  style="color: black;">
-                <div id="ppcontainer">
-                    
-                    
-                    <img src="https://lyeveyin.github.io/lyeveblog.top/post-images/1628784165294.jpg" style="width: 100%;" class="opimg">
-                    
-                    
-                    <h4 class="optitle">To do list</h4>
-                </div>
-            </a>
-            <div class="prev-post">
-                上一篇 <a  data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/post/to-do-list/">To do list</a>
-            </div>
-            
-            
-            <a data-pjax class="next-post-pc" href="https://lyeveyin.github.io/lyeveblog2.top/post/mark/"  style="color: black;">
-                <div id="npcontainer">
-                    
-                    
-                    <img src="https://lyeveyin.github.io/lyeveblog.top/post-images/1628784165294.jpg" style="width: 100%;" class="opimg">
-                    
-                    
-                    <h4 class="optitle">Mark</h4>
-                </div>
-            </a>
-            <div class="next-post">
-                下一篇 <a  data-pjax href="https://lyeveyin.github.io/lyeveblog2.top/post/mark/">Mark</a>
-            </div>
-            
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- 弹窗 -->
-    <div id="myModal" class="modal">
-        <img class="modal-content" id="img01">
-    </div>
-</body>
-<script>
-    //文章阅读热度
-    var pl = $("#pl").html();
-    var rootaddr = $("#rootaddr").html();
-    pl = pl.replace(rootaddr, "");
-    $("#hotnum").attr('id', pl);
-</script>
-                    <div class="toc-container">
+    
+    <div id="post-container" class="eleg-allpostscontainer">
+        <div v-for="post in postinfo" class="eleg-posts">
+            <div v-if="post.elegcontainer=='eleg-postcontainer-left'">
+                    <div :class="post.elegcontainer">
+                        <img :src="post.feature" alt="" :class="post.imgclass">
                         
-                    </div>
-                    <div class="tog">
-                        <div class="toggleContainer">
-                            <div class="toggle">
-                                <i class="fas fa-angle-double-up"></i>
+                        <img class="eleg-swordsmen-left" src="https://lyeveyin.github.io/lyeveblog2.top/media/images/swordsmenleft.webp" alt="">
+                        
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
                             </div>
                         </div>
                     </div>
-                    <!---------------------------- 评论系统👇 ------------------------->
-                    <div id="comment" class="comment">
-                        <div class="commentcontainer">
-                            
-                                
-                            
+                    <div class='eleg-tags'>
+                        <div v-for="tag in post.tags">
+                            <div class="posttag">
+                                <a data-pjax href="" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <!---------------------------- 评论系统👆 ------------------------->
-                </div>
-                <!-- main标签，pjax渲染时加载以上内容👆 -->
-                <div class="col-md-1 col-lg-2"></div>
-                <div id="bg">
-                </div>
             </div>
-            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-            
+            <div v-else>
+                    <div :class="post.elegcontainer">
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <img class="eleg-swordsmen" src="https://lyeveyin.github.io/lyeveblog2.top/media/images/swordsmen.webp" alt="">
+                        
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="tag in post.tags">
+                            <div class="posttag">
+                                <a data-pjax href="" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
-        <!-- aplayer播放器加载👇 -->
+    </div>
+
+    
+    <script>
+    var app2 = new Vue({
+      el: '#post-container',
+      mounted:function(){
+        this.getpostInfo();
+      },
+      methods:{
+         getpostInfo:function(){
+             var plflist = $("span[name='plfeature']");
+             var pltlist = $("span[name='pltitle']");
+             var plllist = $("span[name='pllink']");
+             var pldlist = $("span[name='pldate']");
+             var plslist = $("span[name='plstats']");
+             var pltaglist = $("span[name='pltag']");
+             for(var i=0;i<this.pagesize&&i<plflist.length;i++){
+                 var d = {};
+                 var tags = []
+                 d["feature"] = plflist.eq(i).html();
+                 d["title"] = pltlist.eq(i).html();
+                 d["link"] = plllist.eq(i).html();
+                 d["date"] = pldlist.eq(i).html();
+                 d['stats'] = plslist.eq(i).html();
+                 for(var j=0;j<pltaglist.length;j++){
+                     if(pltaglist.eq(j).attr('alt')==d['title'])
+                        tags.push(pltaglist.eq(j).html())
+                 }
+                 d["tags"] = tags;
+                 if(i%2==0)
+                 {
+                     d['elegcontainer'] = 'eleg-postcontainer-left';
+                     d['imgclass'] = 'eleg-img-left'
+                 }
+                 else{
+                    d['elegcontainer'] = 'eleg-postcontainer-right';
+                    d['imgclass'] = 'eleg-img-right' 
+                 }
+                 this.postinfo.push(d);
+             }
+         }
+      },
+      data: {
+        pagesize: "13",
+        postinfo:[],
+      }
+    })
+    </script>
+
+                            <div>
+                                <div class="pcpagi">
+    <div class="pagi">
+        <ul>
             
-            <head>
+            <li><a style="width:100px">&nbsp;</a></li>
+            
+                    <li><a id="page1">1</a></li>
+                    <li><a id="page2" class="active">2</a></li>
+                    <li><a id="page3">3</a></li>
+                    
+            <li><a style="width:100px">&nbsp;</a></li>
+            
+                </ul>
+    </div>
+</div>
+
+<div id="pagination-prev" style="display:none"> 
+</div>
+<div id="pagination-next" style="display:none"> </div>
+
+<div class="pagination-container">
+      
+    
+</div>
+
+<script>
+    var prevstr = document.getElementById("pagination-prev").innerHTML;
+    var nextstr = document.getElementById("pagination-next").innerHTML;
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+    var page3 = document.getElementById("page3");
+    page1.innerHTML = '-';
+    page2.innerHTML = '1';
+    page3.innerHTML = '-';
+    if (prevstr.length > 5) {
+        if (prevstr.indexOf("page/") != -1) {
+            var prevnum = parseInt(prevstr.split("page/")[1]);
+            page1.innerHTML = prevnum;
+            page2.innerHTML = prevnum + 1;
+        } else {
+            page1.innerHTML = 1;
+            page2.innerHTML = 2;
+        }
+    }
+    if (nextstr.indexOf("page/") != -1) {
+        var nextnum = parseInt(nextstr.split("page/")[1]);
+        page3.innerHTML = nextnum;
+        page2.innerHTML = nextnum - 1;
+    }
+</script>
+                                <div style="padding-bottom:10%"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2"></div>
+                </div>
+                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+                
+                <!------------------ 顶部菜单栏html👇--------->
+                
+                <!------------------ 顶部菜单栏html👆--------->
+            </div>
+            
+                        <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1400,38 +1288,29 @@ menulist.eq(i).show();
     }
 </script>
             
-        <!-- aplayer播放器加载👆 -->
-    </div>
-    
+        </div>
+        <div id="bg">
+        </div>
+        <!------- 背景图加载方式👇----- -->
+        <div id="bgchoice" style="display: none">link
+                    </div>
+                    
+                    <div id="bgurl" style="display:none">https://lyeveyin.github.io/lyeveblog.top/post-images/1628784069719.jpg</div>
+                       
+        </div>
+        <!------- 背景图加载方式👆 --------------->
+</div>
+</div>
 
-    <!-- 背景图加载方式👇 -->
-    <div id="bgchoice" style="display: none">link
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+        </div>
+        <div id="domainname" style="display:none">https://lyeveyin.github.io/lyeveblog2.top
                 </div>
-                
-                <div id="bgurl" style="display:none">https://lyeveyin.github.io/lyeveblog.top/post-images/1628784069719.jpg</div>
-                
-    <!-- 背景图加载方式👆 -->
 </body>
-
-<script>
-    //初始化
-    //更换twikoo头像
-    setTimeout(replaceAvatar,1000);
-    setTimeout(replaceAvatar,2000);
-    setTimeout(replaceAvatar,8000);
-    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
-    lazyload();
-    //为文章内所有代码块添加代码复制功能 👇
-    codeinit();
-    // ------代码高亮显示功能-------------
-    hljs.initHighlightingOnLoad();
-    if (shareChoice)
-        shareInit();
-    if (donateChoice)
-        donateInit();
-</script>
-
-<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
+</html>
+<!-------------------- live2d功能👇 --------------------------->
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1443,29 +1322,7 @@ menulist.eq(i).show();
     loadlive2d("live2d", "https://lyeveyin.github.io/lyeveblog2.top/media/live2d/assets/tororo.model.json");
 </script>
 
-<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
-
-
-<!----------------------- 返回顶部按钮功能👇 --------------------->
-<script>
-    $(function () {
-        $('.toggleContainer').click(function () {
-            $('html,body').animate({
-                scrollTop: '0px'
-            }, 800);
-        });
-        $(window).scroll(function () {
-            var st = $(window).scrollTop();
-            if (st > 30) {
-                $(".toggleContainer").fadeIn(400);
-            } else {
-                $(".toggleContainer").fadeOut(100);
-            }
-        });
-    });
-</script>
-<!----------------------- 返回顶部按钮功能👆 --------------------->
-
+<!-------------------- live2d功能👆--------------------------->
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
@@ -1476,32 +1333,12 @@ menulist.eq(i).show();
         for (var i = 0; i < 3; i++)
             bgurl = bgurl.replace("\\", "/");
     bg.css("background", "url('" + bgurl + "')");
+
+    window.onload = function () {
+        aplayerbtnInit();
+    }
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
 
-
-
 <script src="https://lyeveyin.github.io/lyeveblog2.top/media/js/index.js"></script>
-
-
-<script>
-    //加载后的事件同步（阅读量、移动端评论等
-    window.onload = function () {
-    //代码块高亮渲染
-    document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-    });
-        getHotnum();
-        var sharepc = $(".share").eq(0).html();
-        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
-        aplayerbtnInit();
-        $(".hljs").css({
-            "padding": "20px"
-        })
-    }
-</script>
-
-<!-- <script src="https://lyeveyin.github.io/lyeveblog2.top/media/js/av-min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
