@@ -2,14 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lyeveyin.github.io/lyeveblog2.top</id>
     <title>Lyeve&apos;s diary</title>
-    <updated>2021-10-06T15:33:58.928Z</updated>
+    <updated>2022-03-12T12:16:08.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lyeveyin.github.io/lyeveblog2.top"/>
     <link rel="self" href="https://lyeveyin.github.io/lyeveblog2.top/atom.xml"/>
     <subtitle>八大行星——水星记</subtitle>
     <logo>https://lyeveyin.github.io/lyeveblog2.top/images/avatar.png</logo>
     <icon>https://lyeveyin.github.io/lyeveblog2.top/favicon.ico</icon>
-    <rights>All rights reserved 2021, Lyeve&apos;s diary</rights>
+    <rights>All rights reserved 2022, Lyeve&apos;s diary</rights>
+    <entry>
+        <title type="html"><![CDATA[【工作】善始善终的实习]]></title>
+        <id>https://lyeveyin.github.io/lyeveblog2.top/post/gong-zuo-shan-shi-shan-zhong-de-shi-xi/</id>
+        <link href="https://lyeveyin.github.io/lyeveblog2.top/post/gong-zuo-shan-shi-shan-zhong-de-shi-xi/">
+        </link>
+        <updated>2022-03-03T15:13:21.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【IN上海】03room tour ]]></title>
         <id>https://lyeveyin.github.io/lyeveblog2.top/post/in-shang-hai-03house-tour/</id>
@@ -72,12 +79,5 @@
         <link href="https://lyeveyin.github.io/lyeveblog2.top/post/ting-ge/">
         </link>
         <updated>2021-08-19T07:15:40.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【齐思钧】我好像在哪见过你]]></title>
-        <id>https://lyeveyin.github.io/lyeveblog2.top/post/qi-si-jun-wo-hao-xiang-zai-na-jian-guo-ni/</id>
-        <link href="https://lyeveyin.github.io/lyeveblog2.top/post/qi-si-jun-wo-hao-xiang-zai-na-jian-guo-ni/">
-        </link>
-        <updated>2021-08-19T07:11:39.000Z</updated>
     </entry>
 </feed>
