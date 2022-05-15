@@ -4,11 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/media/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/styles/main.css">
-    <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/media/css/font-awesome.css">
+    <script src="https://lyeveyin.github.io/lyeve1Mercury.top/media/js/valine.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <meta name="description" content="八大行星——水星记" />
+    <meta http-equiv="x-pjax-version" content="v123">
     <title>Lyeve's Mercury</title>
 </head>
 
@@ -17,6 +19,8 @@
     <div id="content">
         <div class="nav-large">
             <div class="row">
+                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+                
                 <!--------------- pc端菜单栏👇 ---------------->
                 <div class="side"><head>
     <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/media/css/bootstrap.min.css">
@@ -926,9 +930,17 @@ menulist.eq(i).show();
 
 </div>
                 <!--------------- pc端菜单栏👆 ---------------->
-               
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
+                <div class="col-md-1 col-lg-3"></div>
                 <!----------- 移动端导航栏👇 ----------------->
-                <div class="tbar"> <head>
+                <div class="mobilebar"><head>
   <!-- 引入Bootstrap核心样式文件 -->
   <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/media/css/bootstrap.min.css">
 </head>
@@ -1062,23 +1074,90 @@ menulist.eq(i).show();
         btstate = false;
       }
     }
-  </script> </div>
+  </script> 
                 <!----------- 移动端导航栏👆 ----------------->
-
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
-                <div id="tab1" class="tab">
-                    <div class="bars">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="close"></div>
                 </div>
-                <div class="col-md-1 col-lg-3"></div>
-                    <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                        <div class="mobilebar">
-                            <img src="" alt="" class="plbg">
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+                    <!-- 移动端 -->
+                    <div class="mobilebar">
+                        <!-- 移动端欢迎页 -->
+<div class="welcome">
+    <div class="avatar-border">
+        <img src="https://lyeveyin.github.io/lyeve1Mercury.top/images/avatar.png?v=1652599820379" class="avatar">
+    </div>
+    <span class="mobiledescribtion"></span>
+</div>
+
+
+    <div id="mobilebgurl" style="display:none">https://lyeveyin.github.io/lyeveblog.top/post-images/jing-yan-ru-he-cha-kan-b-zhan-ru-zhan-shi-jian.jpeg</div>
+
+<script>
+    var welcome = $('.welcome');
+    var bgurl = document.getElementById("mobilebgurl").innerHTML;
+    for (var i = 0; i < 3; i++)
+        bgurl = bgurl.replace("\\", "/");
+    welcome.css("background", "url('" + bgurl + "')");
+    var mobiledes = document.querySelector(".mobiledescribtion");
+    var text = "八大行星——水星记";
+    // 当前显示第几个字
+    var mobilecharIndex = 1;
+    // 每个字显示间隔默认是500毫秒
+    var mobiledelta = 500;
+
+    // 记录动画执行开始时间
+    var mobilestart = null;
+    // 是否为删除动画
+    var mobileisDeleting = false;
+
+    // 动画回调函数
+    function mobileLoadDes(time) {
+        window.requestAnimationFrame(mobileLoadDes);
+        // 初始化开始时间
+        if (!mobilestart) start = time;
+        // 获取时间间隔
+        var mobileprogress = time - mobilestart;
+        // 每隔一定的时间，打印出一个新的字符
+        if (mobileprogress > mobiledelta) {
+            // 如果是打字效果
+            if (!mobileisDeleting) {
+                // 给展示文字的span新增一个字符，使用innerHTML来替换，charIndex自增1，然后返回新的字符串子串
+                mobiledes.innerHTML = "&nbsp;" + text.slice(
+                    0,
+                    ++mobilecharIndex
+                );
+                mobiledelta = 500 - Math.random() * 400;
+            } else {
+                // 如果是删除效果，则把文字一个一个减掉
+                mobiledes.innerHTML = "&nbsp;" + text.slice(
+                    0,
+                    mobilecharIndex--
+                );
+            }
+            // 把star更新为当前时间，进行下一个周期
+            mobilestart = time;
+
+            // 如果文字已经全部打印完毕
+            if (mobilecharIndex === text.length) {
+                // 下次开始删除文字
+                mobileisDeleting = true;
+                // 删除文字的间隔为200毫秒
+                mobiledelta = 100;
+                // 额外等待1.2秒后再删除
+                mobilestart = time + 1000;
+            }
+
+            // 如果文字删除完毕
+            if (mobilecharIndex < 0) {
+                mobileisDeleting = false;
+                // 额外增加200毫秒延迟
+                mobilestart = time + 200;
+            }
+        }
+    }
+
+    window.requestAnimationFrame(mobileLoadDes);
+</script>
+                        <img src="" alt="" class="plbg">
 <script>
     var bgchoice = "link";
     if(bgchoice=='default')
@@ -1088,41 +1167,252 @@ menulist.eq(i).show();
     $(".plbg").attr("src",plbgurl);
     $(".plbg").fadeIn(200);
 </script>
-                        </div>
-                        <script>
-                            $(".tag").each(function () {
-                                var rgb = '#' + Math.floor((Math.random()) * 0xffffff).toString(16);;
-                                $(this).css('color', rgb);
-                            });
-                        </script>
-                        <div class="tagsbackgroundleft"></div>
-                        <div class="tags-container">
-                            
-                            <img class="tagsimg" src="https://lyeveyin.github.io/lyeveblog.top/post-images/1628784069719.jpg" alt="">
-                            
+                    </div>
+                    <div style="display:none">
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: '',
+                appKey: '',
+                notify: true,
+                verify: false,
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
+</div>
+                    <link rel="stylesheet" href="https://lyeveyin.github.io/lyeve1Mercury.top/media/css/font-awesome.css">
+
+
+    <div style="display: none;">
+        
+            
+                <span name="plfeature">https://lyeveyin.github.io/lyeve1Mercury.top/post-images/ri-chang-guan-yu-shi-xi.jpg</span>
+                
+            <span name="pltitle">【日常】关于实习</span>
+            <span name="pllink">https://lyeveyin.github.io/lyeve1Mercury.top/post/ri-chang-guan-yu-shi-xi/</span>
+            <span name="pldate">2021-08-01</span>
+            <span name="plstats">6 min read</span>
+            
+                <span name="pltag" alt="【日常】关于实习">日常</span>
+                <span name="pltaglink" alt="【日常】关于实习">https://lyeveyin.github.io/lyeve1Mercury.top/tag/ri-chang/</span>
+            
+        
+    </div>
+
+    
+    <div id="post-container" class="eleg-allpostscontainer">
+        <div v-for="post in postinfo" class="eleg-posts">
+            <div v-if="post.elegcontainer=='eleg-postcontainer-left'">
+                    <div :class="post.elegcontainer">
+                        <img :src="post.feature" alt="" :class="post.imgclass">
                         
-                            <a data-pjax class="tag" href="https://lyeveyin.github.io/lyeve1Mercury.top/tag/shang-hai/"># 上海</a>
-                            
-                            <a data-pjax class="tag" href="https://lyeveyin.github.io/lyeve1Mercury.top/tag/target/"># target</a>
-                            
-                            <a data-pjax class="tag" href="https://lyeveyin.github.io/lyeve1Mercury.top/tag/ji-lu/"># 纪录</a>
-                            
-                            <a data-pjax class="tag" href="https://lyeveyin.github.io/lyeve1Mercury.top/tag/zhui-xing/"># 追星</a>
-                            
-                            <a data-pjax class="tag" href="https://lyeveyin.github.io/lyeve1Mercury.top/tag/ri-chang/"># 日常</a>
-                            
+                        <img class="eleg-swordsmen-left" src="https://lyeveyin.github.io/lyeve1Mercury.top/media/images/swordsmenleft.webp" alt="">
+                        
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-2"></div>
-                    <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div v-else>
+                    <div :class="post.elegcontainer">
+                        <div class="eleg-info">
+                            <span class="eleg-title">{{post.title}}</span>
+                            <div style="margin-top:15px;">
+                                <span class="postdate eleg-date"><i class="fa fa-calendar"></i>{{post.date}}</span>
+                                <span class="poststatus postdate eleg-stats"><i class="fa fa-clock-o"></i> {{post.stats}}</span>
+                            </div>
+                            <div style="margin-top:50px">
+                                <a :href="post.link" class="eleg-btn" data-pjax>阅读全文</a>
+                            </div>
+                        </div>
+                        
+                        <img class="eleg-swordsmen" src="https://lyeveyin.github.io/lyeve1Mercury.top/media/images/swordsmen.webp" alt="">
+                        
+                        <img :src="post.feature" alt="" :class="post.imgclass">
+                    </div>
+                    <div class='eleg-tags'>
+                        <div v-for="(tag,i) in post.tags">
+                            <div class="posttag">
+                                <a data-pjax :href="post.taglink[i]" class="postlink eleg-postlink">
+                                    <i class="fa fa-tag"></i>{{tag}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+    var app2 = new Vue({
+      el: '#post-container',
+      mounted:function(){
+        this.getpostInfo();
+      },
+      methods:{
+         getpostInfo:function(){
+             var plflist = $("span[name='plfeature']");
+             var pltlist = $("span[name='pltitle']");
+             var plllist = $("span[name='pllink']");
+             var pldlist = $("span[name='pldate']");
+             var plslist = $("span[name='plstats']");
+             var pltaglist = $("span[name='pltag']");
+             var pltaglinklist = $("span[name='pltaglink']")
+             for(var i=0;i<this.pagesize&&i<plflist.length;i++){
+                 var d = {};
+                 var tags = []
+                 var taglink = []
+                 d["feature"] = plflist.eq(i).html();
+                 d["title"] = pltlist.eq(i).html();
+                 d["link"] = plllist.eq(i).html();
+                 d["date"] = pldlist.eq(i).html();
+                 d['stats'] = plslist.eq(i).html();
+                 for(var j=0;j<pltaglist.length;j++){
+                     if(pltaglist.eq(j).attr('alt')==d['title'])
+                        tags.push(pltaglist.eq(j).html())
+                 }
+                 d["tags"] = tags;
+                 for(var j=0;j<pltaglinklist.length;j++){
+                    if(pltaglinklist.eq(j).attr('alt')==d['title'])
+                        taglink.push(pltaglinklist.eq(j).html())
+                 }
+                 d["taglink"] = taglink
+                 if(i%2==0)
+                 {
+                     d['elegcontainer'] = 'eleg-postcontainer-left';
+                     d['imgclass'] = 'eleg-img-left'
+                 }
+                 else{
+                    d['elegcontainer'] = 'eleg-postcontainer-right';
+                    d['imgclass'] = 'eleg-img-right' 
+                 }
+                 this.postinfo.push(d);
+             }
+         }
+      },
+      data: {
+        pagesize: "15",
+        postinfo:[],
+      }
+    })
+    </script>
+
+
+                    <div>
+                        <div class="pcpagi">
+    <div class="pagi">
+        <ul>
+            
+            <li><a data-pjax href="https://lyeveyin.github.io/lyeve1Mercury.top/" style="width:100px" id="prev">上一页</a></li>
+            
+                    <li><a id="page1">1</a></li>
+                    <li><a id="page2" class="active">2</a></li>
+                    <li><a id="page3">3</a></li>
                     
-                    <!------------------ 顶部菜单栏html👇--------->
-                    
-                <!--------------- ---顶部菜单栏html👆--------->
-                <div class="col-xs-6 col-sm-3"></div>
+            <li><a style="width:100px">&nbsp;</a></li>
+            
+                </ul>
+    </div>
+</div>
+
+<div id="pagination-prev" style="display:none"> https://lyeveyin.github.io/lyeve1Mercury.top/
+</div>
+<div id="pagination-next" style="display:none"> </div>
+
+<div class="pagination-container">
+    
+    <a data-pjax href="https://lyeveyin.github.io/lyeve1Mercury.top/" class="mobile-prevpage">上一页</a>
+      
+    
+</div>
+
+<script>
+    var prevstr = document.getElementById("pagination-prev").innerHTML;
+    var nextstr = document.getElementById("pagination-next").innerHTML;
+    var page1 = document.getElementById("page1");
+    var page2 = document.getElementById("page2");
+    var page3 = document.getElementById("page3");
+    page1.innerHTML = '-';
+    page2.innerHTML = '1';
+    page3.innerHTML = '-';
+    if (prevstr.length > 5) {
+        if (prevstr.indexOf("page/") != -1) {
+            var prevnum = parseInt(prevstr.split("page/")[1]);
+            page1.innerHTML = prevnum;
+            page2.innerHTML = prevnum + 1;
+        } else {
+            page1.innerHTML = 1;
+            page2.innerHTML = 2;
+        }
+    }
+    if (nextstr.indexOf("page/") != -1) {
+        var nextnum = parseInt(nextstr.split("page/")[1]);
+        page3.innerHTML = nextnum;
+        page2.innerHTML = nextnum - 1;
+    }
+</script>
+                    </div>
+                </div>
+                <div class="col-md-1 col-lg-2"></div>
+                
+                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
+                <!------------------ 顶部菜单栏html👇--------->
+                 
+                <!------------------ 顶部菜单栏html👆--------->
+                </div>
+            </div>
+            <div id="bg">
+            </div>
+            <!------- 背景图加载方式👇----- -->
+            <div id="bgchoice" style="display: none">link
             </div>
             
-                        <head>
+            <div id="bgurl" style="display:none">https://lyeveyin.github.io/lyeveblog.top/post-images/1628784069719.jpg</div>
+            
+            <!------- 背景图加载方式👆----- --> 
+        <div id="landlord">
+            <div class="message" style="opacity:0"></div>
+            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+        </div>
+    </div>
+        
+            <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 </head>
 
@@ -1184,48 +1474,22 @@ menulist.eq(i).show();
         }
     }
 </script>
-                        
-        </div></div>
-        <div id="bg">
+        
+    <div id="domainname" style="display:none">https://lyeveyin.github.io/lyeve1Mercury.top
         </div>
-        <!-- 背景图加载方式👇 -->
-        <div id="bgchoice" style="display: none">link
-                    </div>
-                    
-                    <div id="bgurl" style="display:none">https://lyeveyin.github.io/lyeveblog.top/post-images/1628784069719.jpg</div>
-                       
-        </div>
-        <!-- 背景图加载方式👆 -->
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://lyeveyin.github.io/lyeve1Mercury.top
-                </div>
-</body>
-
-</html>
-<!-- 标签框随机色彩功能👇 -->
-<script>
-    $(".tag").each(function () {
-        var rgb = '#' + Math.floor((Math.random()) * 0xffffff).toString(16);;
-        $(this).css('color', rgb);
-    });
-</script>
-<!-- 标签框随机色彩功能👆 -->
 
 <!-------------------- live2d功能👇 --------------------------->
-
-<script type="text/javascript">
-    var message_Path = '/live2d/'
-    var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
-</script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js"></script>
-<script type="text/javascript" src="https://lyeveyin.github.io/lyeve1Mercury.top/media/live2d/js/message.js"></script>
-<script type="text/javascript">
-    loadlive2d("live2d", "https://lyeveyin.github.io/lyeve1Mercury.top/media/live2d/assets/tororo.model.json");
-</script>
-
+    
+        <script type="text/javascript">
+            var message_Path = '/live2d/'
+            var home_Path = document.getElementById("domainname").innerHTML + "/"; //此处修改为你的域名，必须带斜杠
+        </script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/live2d.js"></script>
+        <script type="text/javascript" src="https://lyeveyin.github.io/lyeve1Mercury.top/media/live2d/js/message.js"></script>
+        <script type="text/javascript">
+            loadlive2d("live2d", "https://lyeveyin.github.io/lyeve1Mercury.top/media/live2d/assets/tororo.model.json");
+        </script>
+    
 <!-------------------- live2d功能👆 --------------------------->
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
@@ -1244,4 +1508,9 @@ menulist.eq(i).show();
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
-<script src="https://lyeveyin.github.io/lyeve1Mercury.top/media/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+        <script src="https://lyeveyin.github.io/lyeve1Mercury.top/media/js/index.js"></script>
+        
+</body>
+</html>
